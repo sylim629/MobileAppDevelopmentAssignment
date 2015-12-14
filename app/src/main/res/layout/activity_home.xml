@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TabHost xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@android:id/tabhost"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical">
+
+        <TabWidget
+            android:id="@android:id/tabs"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
+
+        <FrameLayout
+            android:id="@android:id/tabcontent"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:id="@+id/my_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <ImageButton
+                        android:id="@+id/picture"
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:background="@drawable/insert_picture" />
+
+                    <TableLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TableRow>
+
+                            <TextView
+                                android:layout_column="1"
+                                android:padding="10dp"
+                                android:text="스터디지역" />
+
+                            <EditText
+                                android:id="@+id/study_region"
+                                android:layout_margin="10dp"
+                                android:layout_weight="1"
+                                android:padding="10dp" />
+                        </TableRow>
+
+                        <View
+                            android:layout_height="1dp"
+                            android:background="@color/login_background"
+                            android:paddingBottom="2dp"
+                            android:paddingTop="2dp" />
+
+                        <TableRow>
+
+                            <TextView
+                                android:layout_column="1"
+                                android:padding="10dp"
+                                android:text="PAY" />
+
+                            <EditText
+                                android:id="@+id/amount_pay"
+                                android:layout_margin="10dp"
+                                android:layout_weight="1"
+                                android:padding="10dp" />
+                        </TableRow>
+
+                        <View
+                            android:layout_height="1dp"
+                            android:background="@color/login_background"
+                            android:paddingBottom="2dp"
+                            android:paddingTop="2dp" />
+
+                        <TableRow>
+
+                            <TextView
+                                android:layout_column="1"
+                                android:padding="10dp"
+                                android:text="스터디기간" />
+
+                            <EditText
+                                android:id="@+id/study_period"
+                                android:layout_margin="10dp"
+                                android:layout_weight="1"
+                                android:padding="10dp" />
+                        </TableRow>
+
+                        <TableRow>
+
+                            <TextView
+                                android:layout_column="1"
+                                android:padding="10dp"
+                                android:text="스터디요일" />
+
+                            <EditText
+                                android:id="@+id/study_days"
+                                android:layout_margin="10dp"
+                                android:layout_weight="1"
+                                android:padding="10dp" />
+                        </TableRow>
+
+                        <TableRow>
+
+                            <TextView
+                                android:layout_column="1"
+                                android:padding="10dp"
+                                android:text="스터디시간" />
+
+                            <EditText
+                                android:id="@+id/study_hours"
+                                android:layout_margin="10dp"
+                                android:layout_weight="1"
+                                android:padding="10dp" />
+                        </TableRow>
+
+                        <View
+                            android:layout_height="1dp"
+                            android:background="@color/login_background"
+                            android:paddingBottom="2dp"
+                            android:paddingTop="2dp" />
+
+                        <TableRow>
+
+                            <TextView
+                                android:layout_column="1"
+                                android:padding="10dp"
+                                android:text="스터디인원" />
+
+                            <EditText
+                                android:id="@+id/study_n_people"
+                                android:layout_margin="10dp"
+                                android:layout_weight="1"
+                                android:padding="10dp" />
+                        </TableRow>
+
+                        <TableRow>
+
+                            <TextView
+                                android:layout_column="1"
+                                android:padding="10dp"
+                                android:text="회사소개" />
+
+                            <EditText
+                                android:id="@+id/company_info"
+                                android:layout_margin="10dp"
+                                android:layout_weight="1"
+                                android:padding="10dp" />
+                        </TableRow>
+
+                        <TableRow>
+
+                            <TextView
+                                android:layout_column="1"
+                                android:padding="10dp"
+                                android:text="상세요강" />
+
+                            <EditText
+                                android:id="@+id/info_specific"
+                                android:layout_margin="10dp"
+                                android:layout_weight="1"
+                                android:padding="10dp" />
+                        </TableRow>
+                    </TableLayout>
+
+                    <Button
+                        android:id="@+id/save"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:background="@color/login_background"
+                        android:text="저장"
+                        android:textColor="@android:color/white" />
+                </LinearLayout>
+            </ScrollView>
+
+            <ListView
+                android:id="@+id/study_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <ListView
+                android:id="@+id/teacher_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </FrameLayout>
+    </LinearLayout>
+</TabHost>
